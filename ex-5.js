@@ -80,5 +80,13 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let highestPrice = orders[0].productPrice * orders[0].productQuantity;
+let idProduct;
+for (let i = 0; i < orders.length; i++){
+  if (orders[i].productPrice * orders[i].productQuantity > highestPrice) {
+    highestPrice = orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+
+console.log(`The most expensive order is order id 8 ${highestPrice}`);
