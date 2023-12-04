@@ -82,3 +82,26 @@ let orders = [
 ];
 
 // Start coding here
+let total= 0;
+function totalAmount () {
+  for (let i=0;i < orders.length;i++) {
+    total += orders[i].productPrice * orders[i].productQuantity
+    }
+  console.log(`Total amount of the orders: ${total.toLocaleString()} Baht`);
+}
+
+total = totalAmount()
+
+
+// let total= 0;
+// function totalAmount () {
+//   for (let item of orders) {
+//     total += item.productPrice * item.productQuantity
+//     }
+
+// function totalAmount () {
+//   for (let i in orders) {
+//     total += (orders[i].productPrice * orders[i].productQuantity)
+//     console.log(i);
+//     console.log(orders[i]);
+// }
